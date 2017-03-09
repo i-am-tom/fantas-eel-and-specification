@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Supporting material for my blog series.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-am-tom/fantas-eel-and-specification.git"
+  },
+  "author": "Tom Harding <tomjharding@live.co.uk> (http://tjh.io/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-am-tom/fantas-eel-and-specification/issues"
+  },
+  "homepage": "https://github.com/i-am-tom/fantas-eel-and-specification#readme",
+  "dependencies": {
+    "daggy": "0.0.1"
+  }
+}
