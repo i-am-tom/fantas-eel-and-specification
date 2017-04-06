@@ -1,5 +1,5 @@
 {
-  "name": "y",
+  "name": "fantas-eel-and-specification",
   "version": "1.0.0",
   "description": "Supporting material for my blog series.",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/i-am-tom/fantas-eel-and-specification.git"
   },
-  "author": "Tom Harding <tomjharding@live.co.uk> (http://tjh.io/)",
+  "author": "Tom Harding <tomjharding@live.co.uk>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/i-am-tom/fantas-eel-and-specification/issues"
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/i-am-tom/fantas-eel-and-specification#readme",
   "dependencies": {
     "daggy": "0.0.1"
+  },
+  "devDependencies": {
+    "tape": "^4.6.3"
   }
 }
