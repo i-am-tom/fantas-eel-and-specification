@@ -63,11 +63,21 @@ test('map', assert => {
     Nil.map(x => x + 2), Nil,
     'Maps over empty list')
 
-  assert.deepEqual(
+  assert.same(
     Cons(2, Cons(3, Nil))
       .map(x => x + 1),
     Cons(3, Cons(4, Nil)),
     'Maps over non-empty list')
+
+  assert.end()
+})
+
+test('filter', assert => {
+  assert.same(
+    Cons(1, Cons(2, Cons(3, Nil))).filter(x => x === 2),
+    Cons(2, Nil), 'Filters a Cons list')
+
+  assert.same(Nil.filter(x => x === 1), Nil, 'Filters Nil')
 
   assert.end()
 })

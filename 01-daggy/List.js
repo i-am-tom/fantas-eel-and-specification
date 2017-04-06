@@ -42,6 +42,17 @@ List.prototype.map = function (f) {
   })
 }
 
+//- Filter out values that fail the predicate.
+//+ filter :: [a] ~> (a -> Boolean) -> [a]
+List.prototype.filter = function (predicate) {
+  return this.cata({
+    Cons: (head, tail) => predicate(head)
+                          ? Cons(head, tail.filter(predicate))
+                          : tail.filter(predicate),
+    Nil: () => Nil
+  })
+}
+
 //- Convert a list into an array.
 //+ toArray :: [a] ~> Array a
 List.prototype.toArray = function () {
