@@ -1,7 +1,7 @@
 const { True, False } = require('./Bool')
 const test = require('tape')
 
-test('fold', assert => {
+test('Bool > fold', assert => {
   assert.equals(True.fold(1, 2), 1,
                 'Folds a True')
 
@@ -11,7 +11,7 @@ test('fold', assert => {
   assert.end()
 })
 
-test('not', assert => {
+test('Bool > not', assert => {
   assert.ok(True.not()
                 .fold(false, true),
             'Negates a True')
@@ -23,7 +23,7 @@ test('not', assert => {
   assert.end()
 })
 
-test('&& Truth Table', assert => {
+test('Bool > && Truth Table', assert => {
   assert.ok(True.and(True)
                 .fold(true, false),
             'T&T')
@@ -43,7 +43,7 @@ test('&& Truth Table', assert => {
   assert.end()
 })
 
-test('|| Truth Table', assert => {
+test('Bool > || Truth Table', assert => {
   assert.ok(True.or(True)
                 .fold(true, false),
             'T|T')

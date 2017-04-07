@@ -4,7 +4,7 @@ const test = require('tape')
 
 const { Cuboid, Sphere } = Shape
 
-test('nested cuboid properties', assert => {
+test('Shape > nested cuboid properties', assert => {
   const test = Cuboid(
     Coord(1, 2, 3),
     Coord(4, 5, 6))
@@ -18,7 +18,7 @@ test('nested cuboid properties', assert => {
   assert.end()
 })
 
-test('nested sphere properties', assert => {
+test('Shape > nested sphere properties', assert => {
   const test = Sphere(Coord(9, 7, 5), 10)
 
   assert.equal(test.centre.y, 7,
@@ -30,7 +30,7 @@ test('nested sphere properties', assert => {
   assert.end()
 })
 
-test('translate cuboid', assert => {
+test('Shape > translate cuboid', assert => {
   const test = Cuboid(Coord(1, 2, 3),
                       Coord(4, 5, 6))
                .translate(10, 20, 30)

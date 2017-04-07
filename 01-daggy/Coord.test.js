@@ -1,7 +1,7 @@
 const Coord = require('./Coord')
 const test = require('tape')
 
-test('Properties set', assert => {
+test('Coord > Properties set', assert => {
   assert.equals(Coord(1, null, null).x, 1, 'x coord is set')
   assert.equals(Coord(null, 2, null).y, 2, 'y coord is set')
   assert.equals(Coord(null, null, 3).z, 3, 'z coord is set')
@@ -19,7 +19,7 @@ test('Properties set', assert => {
   assert.end()
 })
 
-test('Translation', assert => {
+test('Coord > Translation', assert => {
   let { x: x3, y: y3, z: z3 } = Coord.origin.translate(7, 8, 9)
   assert.equals(x3, 7, 'x translation')
   assert.equals(y3, 8, 'y translation')
@@ -34,7 +34,7 @@ test('Translation', assert => {
   assert.end()
 })
 
-test('Distance calculations', assert => {
+test('Coord > Distance calculations', assert => {
   assert.equals(Coord.origin.distance(Coord(1, 2, 2)), 3,
                 'Distance calculated between two points')
 

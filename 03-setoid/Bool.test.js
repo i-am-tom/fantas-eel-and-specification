@@ -3,7 +3,7 @@ const test = require('tape')
 
 const { True, False } = Bool
 
-test('equals', assert => {
+test('Bool > equals', assert => {
   assert.ok(True.equals(True), 'TT')
   assert.ok(False.equals(False), 'FF')
 

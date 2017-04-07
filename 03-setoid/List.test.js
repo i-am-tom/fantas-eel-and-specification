@@ -7,7 +7,7 @@ Number.prototype.equals = function (that) {
   return Number(this) === Number(that)
 }
 
-test('Constructor comparison', assert => {
+test('List > Constructor comparison', assert => {
   assert.ok(Nil.equals(Nil), 'Empty lists are equal')
 
   assert.notOk(Nil.equals(Cons(1, Nil)), 'Nil != Cons')
@@ -20,7 +20,7 @@ test('Constructor comparison', assert => {
   assert.end()
 })
 
-test('Recursive equality', assert => {
+test('List > Recursive equality', assert => {
   assert.ok(
     Cons(1, Cons(2, Cons(3, Cons(4, Nil)))).equals(
       Cons(1, Cons(2, Cons(3, Cons(4, Nil))))),
@@ -34,7 +34,7 @@ test('Recursive equality', assert => {
   assert.end()
 })
 
-test('reverse', assert => {
+test('List > reverse', assert => {
   assert.same(
     Cons(1, Cons(2, Nil)).reverse(),
     Cons(2, Cons(1, Nil)),
@@ -47,7 +47,7 @@ test('reverse', assert => {
   assert.end()
 })
 
-test('isPalindrome', assert => {
+test('List > isPalindrome', assert => {
   assert.notOk(
     Cons(1, Cons(2, Nil)).isPalindrome(),
     'Bad palindrome.')

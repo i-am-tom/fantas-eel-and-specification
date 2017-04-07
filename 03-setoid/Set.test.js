@@ -5,7 +5,7 @@ Number.prototype.equals = function (that) {
   return Number(this) === Number(that)
 }
 
-test('Constructor comparison', assert => {
+test('Set > Constructor comparison', assert => {
   assert.same(Set([]).elements, [], 'Empty sets make empty lists')
 
   assert.same(Set([]).add(1).elements, [1], 'Single-element sets')

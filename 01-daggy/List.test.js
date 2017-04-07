@@ -3,14 +3,14 @@ const test = require('tape')
 
 const { Cons, Nil } = List
 
-test('head', assert => {
+test('List > head', assert => {
   assert.equal(Cons(42, Nil).head, 42,
                'Gets the list head')
 
   assert.end()
 })
 
-test('Tail', assert => {
+test('List > Tail', assert => {
   assert.equal(Cons(42, Nil).tail, Nil,
                'Gets empty tail')
 
@@ -22,7 +22,7 @@ test('Tail', assert => {
   assert.end()
 })
 
-test('foldl', assert => {
+test('List > foldl', assert => {
   assert.equal(
     Nil.foldl((acc, _) => acc, 14), 14,
     'Folds an empty list from the left')
@@ -40,7 +40,7 @@ test('foldl', assert => {
   assert.end()
 })
 
-test('foldr', assert => {
+test('List > foldr', assert => {
   assert.equal(
     Nil.foldr((_, acc) => acc, 14), 14,
     'Folds an empty list from the right')
@@ -58,7 +58,7 @@ test('foldr', assert => {
   assert.end()
 })
 
-test('map', assert => {
+test('List > map', assert => {
   assert.same(
     Nil.map(x => x + 2), Nil,
     'Maps over empty list')
@@ -72,7 +72,7 @@ test('map', assert => {
   assert.end()
 })
 
-test('filter', assert => {
+test('List > filter', assert => {
   assert.same(
     Cons(1, Cons(2, Cons(3, Nil))).filter(x => x === 2),
     Cons(2, Nil), 'Filters a Cons list')
@@ -82,7 +82,7 @@ test('filter', assert => {
   assert.end()
 })
 
-test('toArray/fromArray', assert => {
+test('List > toArray/fromArray', assert => {
   assert.deepEqual(
     Cons(2, Cons(3, Nil)).toArray(),
     [2, 3],
