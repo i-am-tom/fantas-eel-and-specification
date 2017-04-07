@@ -33,3 +33,32 @@ test('Recursive equality', assert => {
 
   assert.end()
 })
+
+test('reverse', assert => {
+  assert.same(
+    Cons(1, Cons(2, Nil)).reverse(),
+    Cons(2, Cons(1, Nil)),
+    'Cons list is reversed.')
+
+  assert.same(
+    Nil.reverse(), Nil,
+    'Nil lists are reversed.')
+
+  assert.end()
+})
+
+test('isPalindrome', assert => {
+  assert.notOk(
+    Cons(1, Cons(2, Nil)).isPalindrome(),
+    'Bad palindrome.')
+
+  assert.ok(
+    Cons(1, Cons(1, Nil)).isPalindrome(),
+    'Even-length palindrome.')
+
+  assert.ok(
+    Cons(1, Cons(2, Cons(1, Nil))).isPalindrome(),
+    'Odd-length palindrome.')
+
+  assert.end()
+})
