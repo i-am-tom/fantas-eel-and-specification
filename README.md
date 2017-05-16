@@ -1,5 +1,7 @@
 # Fantas, Eel, and Specification
 
+[![Join the chat at https://gitter.im/fantas-eel-and-specification/Lobby](https://badges.gitter.im/fantas-eel-and-specification/Lobby.svg)](https://gitter.im/fantas-eel-and-specification/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Hello, friends! If you're reading this, I'm either in the process of writing - or have finished writing - a series of **blog posts** on the [Fantasy Land](https://github.com/fantasyland/fantasy-land) specification for typeclasses in JavaScript - hooray!
 
 When _I_ started trying to get to grips with the Fantasy Land spec and its uses, I spent most of my day with this expression:
