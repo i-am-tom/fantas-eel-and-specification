@@ -1,0 +1,6 @@
+import './Array'
+import './Bool'
+import './Function'
+import './Number'
+import './Object'
+import './String'
